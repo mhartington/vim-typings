@@ -23,7 +23,7 @@ function! s:source.gather_candidates(args, context)
           \ 'word': type_file_name,
           \ 'kind': 'command',
           \ 'source': 'typings',
-          \ 'action__command': 'TypingsInstallAmbient '.formatted[0]
+          \ 'action__command': 'TypingsInstall '.formatted[0]
           \ })
   endfor
   return result

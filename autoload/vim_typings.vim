@@ -30,17 +30,13 @@ function! vim_typings#install(...)
   let type_file_list = map(range(1, a:{0}), 'a:{v:val}')
   let stdouts = systemlist('typings install '.join(type_file_list, ' ').' --save')
   if len(stdouts)
+    if join(stdouts, ', ') =~ 'typings ERR!'
+      let stdouts = systemlist('typings install '.join(type_file_list, ' ').' --ambient --save')
+    endif
     echom join(stdouts, ', ')
   endif
 endfunction
 
-function! vim_typings#installAmbient(...)
-  let type_file_list = map(range(1, a:{0}), 'a:{v:val}')
-  let stdouts = systemlist('typings install '.join(type_file_list, ' ').' --ambient --save')
-  if len(stdouts)
-    echom join(stdouts, ', ')
-  endif
-endfunction
 function! vim_typings#uninstall(...)
   let type_file_list = map(range(1, a:{0}), 'a:{v:val}')
   let stdouts = systemlist('typings uninstall '.join(type_file_list, ' ').' --save')
