@@ -18,11 +18,12 @@ function! s:source.gather_candidates(args, context)
   endif
   call remove(stdouts, 0, 1)
   for type_file_name in stdouts
+    let formatted =  split(type_file_name)
     call add(result, {
           \ 'word': type_file_name,
           \ 'kind': 'command',
           \ 'source': 'typings',
-          \ 'action__command': 'TypingsInstallAmbient '.type_file_name
+          \ 'action__command': 'TypingsInstallAmbient '.formatted[0]
           \ })
   endfor
   return result

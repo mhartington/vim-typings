@@ -36,7 +36,7 @@ endfunction
 
 function! vim_typings#installAmbient(...)
   let type_file_list = map(range(1, a:{0}), 'a:{v:val}')
-  let stdouts = systemlist('typings install '.join(type_file_list, ' ').'--ambient --save')
+  let stdouts = systemlist('typings install '.join(type_file_list, ' ').' --ambient --save')
   if len(stdouts)
     echom join(stdouts, ', ')
   endif
