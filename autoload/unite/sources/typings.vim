@@ -1,6 +1,7 @@
 "============================================================================
 " FILE: autoload/unite/sources/typings.vim
-" AUTHOR: Quramy <yosuke.kurami@gmail.com>
+" AUTHOR: Mike Hartington
+" ORIGINAL AUTHOR: Quramy <yosuke.kurami@gmail.com>
 "============================================================================
 
 scriptencoding utf-8

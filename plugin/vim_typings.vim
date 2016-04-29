@@ -1,6 +1,7 @@
 "============================================================================
 " FILE: plugin/vim_dtsm.vim
-" AUTHOR: Quramy <yosuke.kurami@gmail.com>
+" AUTHOR: Mike Hartington
+" ORIGINAL AUTHOR: Quramy <yosuke.kurami@gmail.com>
 "============================================================================
 
 scriptencoding utf-8
