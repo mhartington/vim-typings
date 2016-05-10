@@ -7,11 +7,11 @@
 scriptencoding utf-8
 
 " Preprocessing {{{
-if exists('g:loaded_vim_dtsm')
+if exists('g:loaded_vim_typings')
   finish
 endif
 
-let g:loaded_vim_dtsm = 1
+let g:loaded_vim_typings = 1
 
 let s:save_cpo = &cpo
 set cpo&vim
