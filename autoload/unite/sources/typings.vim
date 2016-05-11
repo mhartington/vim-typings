@@ -12,7 +12,7 @@ let s:source = {
       \ }
 
 function! s:source.gather_candidates(args, context)
-  let stdouts = systemlist('typings search --limit 100'.join(a:args, ' '))
+  let stdouts = systemlist('typings search --limit 100 '.join(a:args, ' '))
   let result = []
   if len(stdouts) < 3
     return
